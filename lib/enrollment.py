@@ -45,3 +45,12 @@ class Enrollment:
 
     def get_enrollment_date(self):
         return self._enrollment_date
+    
+    def aggregate_average_grade(self):
+    total_grade = sum(self._grades.values())
+    num_courses = len(self._grades)
+    if num_courses == 0:
+    return 0  # Avoid division by zero error
+    average_grade = total_grades / num_courses
+    return average_grade
+
